@@ -21,7 +21,7 @@ Before running the application:
 
 • **DB_PASSWORD** - password to log into your database
 ```
-git clone <a href="https://github.com/M41k0n-Mk/info-musicos.git">https://github.com/M41k0n-Mk/info-musicos.git</a>
+git clone https://github.com/M41k0n-Mk/info-musicos.git
 
 cd info-musicos
 
