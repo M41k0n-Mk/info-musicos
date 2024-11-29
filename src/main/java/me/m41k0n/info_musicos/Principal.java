@@ -1,14 +1,21 @@
 package me.m41k0n.info_musicos;
 
 import me.m41k0n.info_musicos.actions.*;
+import me.m41k0n.info_musicos.repository.ArtistRepository;
 
 import java.util.Scanner;
 
 public class Principal {
+    private final ArtistRepository artistRepository;
+
+    public Principal(ArtistRepository artistRepository) {
+        this.artistRepository = artistRepository;
+    }
+
     public void showMenu() {
         MenuContext context = new MenuContext();
 
-        context.setAction(1, new RegisterArtistAction());
+        context.setAction(1, new RegisterArtistAction(artistRepository));
         context.setAction(2, new RegisterMusicAction());
         context.setAction(3, new ListMusicAction());
         context.setAction(4, new SearchMusicByArtistAction());
