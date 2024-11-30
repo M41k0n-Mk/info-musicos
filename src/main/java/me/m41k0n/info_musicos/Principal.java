@@ -20,7 +20,7 @@ public class Principal {
 
         context.setAction(1, new RegisterArtistAction(artistRepository));
         context.setAction(2, new RegisterMusicAction(artistRepository, musicRepository));
-        context.setAction(3, new ListMusicAction());
+        context.setAction(3, new ListMusicAction(musicRepository));
         context.setAction(4, new SearchMusicByArtistAction());
         context.setAction(5, new SearchArtistDataAction());
         context.setAction(0, new ExitApplicationAction());
