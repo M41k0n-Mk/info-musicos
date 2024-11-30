@@ -4,7 +4,6 @@ import lombok.Getter;
 
 @Getter
 public enum FormationType {
-
     SOLO("Solo"),
     DUO("Dupla"),
     TRIO("Trio"),
