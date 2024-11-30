@@ -2,24 +2,28 @@ package me.m41k0n.info_musicos;
 
 import me.m41k0n.info_musicos.actions.*;
 import me.m41k0n.info_musicos.repository.ArtistRepository;
+import me.m41k0n.info_musicos.repository.MusicRepository;
 
 import java.util.Scanner;
 
 public class Principal {
     private final ArtistRepository artistRepository;
+    private final MusicRepository musicRepository;
 
-    public Principal(ArtistRepository artistRepository) {
+    public Principal(ArtistRepository artistRepository, MusicRepository musicRepository) {
         this.artistRepository = artistRepository;
+        this.musicRepository = musicRepository;
     }
 
     public void showMenu() {
         MenuContext context = new MenuContext();
 
         context.setAction(1, new RegisterArtistAction(artistRepository));
-        context.setAction(2, new RegisterMusicAction());
+        context.setAction(2, new RegisterMusicAction(artistRepository, musicRepository));
         context.setAction(3, new ListMusicAction());
         context.setAction(4, new SearchMusicByArtistAction());
         context.setAction(5, new SearchArtistDataAction());
+        context.setAction(0, new ExitApplicationAction());
 
         showMenu(context);
     }

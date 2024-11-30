@@ -1,6 +1,5 @@
 package me.m41k0n.info_musicos.actions;
 
-import me.m41k0n.info_musicos.entity.ArtistEntity;
 import me.m41k0n.info_musicos.enums.FormationType;
 import me.m41k0n.info_musicos.enums.RoleType;
 import me.m41k0n.info_musicos.model.Artist;
@@ -27,11 +26,6 @@ public class RegisterArtistAction implements MenuAction {
         String role = read.nextLine();
         RoleType roleType = RoleType.fromString(role);
         Artist artist = new Artist(name, formationType, roleType);
-        ArtistEntity artistEntity = toEntity(artist);
-        artistRepository.save(artistEntity);
-    }
-
-    private ArtistEntity toEntity(Artist artistModel) {
-        return new ArtistEntity(artistModel);
+        artistRepository.save(artist.toEntity(artist));
     }
 }
