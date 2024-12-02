@@ -19,13 +19,13 @@ public class RegisterArtistAction implements MenuAction {
         System.out.println("Qual o nome do artista?");
         Scanner read = new Scanner(System.in);
         String name = read.nextLine();
-        System.out.println("Esse artista tem carreira solo, dupla, trio, banda?");
+        System.out.println("Esse artista tem carreira solo, dupla, trio ou banda?");
         String formation = read.nextLine();
         FormationType formationType = FormationType.fromString(formation);
         System.out.println("Qual a função desse artista?[Cantor, Baterista, Baixista, Guitarrista, Tecladista");
         String role = read.nextLine();
         RoleType roleType = RoleType.fromString(role);
-        Artist artist = new Artist(name, formationType, roleType);
+        Artist artist = new Artist(name.toLowerCase(), formationType, roleType);
         artistRepository.save(artist.toEntity(artist));
     }
 }

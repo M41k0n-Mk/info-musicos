@@ -4,10 +4,10 @@ import lombok.Getter;
 
 @Getter
 public enum FormationType {
-    SOLO("Solo"),
-    DUO("Dupla"),
-    TRIO("Trio"),
-    BAND("Banda");
+    SOLO("solo"),
+    DUO("dupla"),
+    TRIO("trio"),
+    BAND("banda");
 
     private final String type;
 
@@ -17,7 +17,7 @@ public enum FormationType {
 
     public static FormationType fromString(String typeFormation) {
         for (FormationType type : FormationType.values()) {
-            if (type.getType().contains(typeFormation)) {
+            if (typeFormation.toLowerCase().contains(type.getType())) {
                 return type;
             }
         }
