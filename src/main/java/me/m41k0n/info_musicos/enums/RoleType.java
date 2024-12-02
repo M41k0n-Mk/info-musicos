@@ -4,11 +4,11 @@ import lombok.Getter;
 
 @Getter
 public enum RoleType {
-    DRUMMER("Baterista"),
-    GUITARIST("Guitarrista"),
-    BASSIST("Baixista"),
-    VOCALIST("Cantor"),
-    KEYBOARDIST("Tecladista");
+    DRUMMER("baterista"),
+    GUITARIST("guitarrista"),
+    BASSIST("baixista"),
+    VOCALIST("cantor"),
+    KEYBOARDIST("tecladista");
 
     private final String type;
 
@@ -18,7 +18,7 @@ public enum RoleType {
 
     public static RoleType fromString(String roleType) {
         for (RoleType type : RoleType.values()) {
-            if (type.getType().contains(roleType)) {
+            if (type.getType().contains(roleType.toLowerCase())) {
                 return type;
             }
         }
