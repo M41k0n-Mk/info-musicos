@@ -17,7 +17,7 @@ public class SearchMusicByArtistAction implements MenuAction {
         System.out.println("Qual o nome do artista que você quer buscar as músicas?");
         Scanner read = new Scanner(System.in);
         String nameArtist = read.nextLine();
-        musicRepository.findMusicByArtist(nameArtist).stream()
+        musicRepository.findMusicByArtist(nameArtist.toLowerCase()).stream()
                 .map(m -> new Music(m.getName(), m.getAlbum(), m.getBand()))
                 .forEach(System.out::println);
     }

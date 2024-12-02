@@ -25,7 +25,7 @@ public class RegisterArtistAction implements MenuAction {
         System.out.println("Qual a função desse artista?[Cantor, Baterista, Baixista, Guitarrista, Tecladista");
         String role = read.nextLine();
         RoleType roleType = RoleType.fromString(role);
-        Artist artist = new Artist(name, formationType, roleType);
+        Artist artist = new Artist(name.toLowerCase(), formationType, roleType);
         artistRepository.save(artist.toEntity(artist));
     }
 }
