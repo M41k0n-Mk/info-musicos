@@ -27,7 +27,9 @@ public class RegisterMusicAction implements MenuAction {
         System.out.println("Essa música é de qual artista/banda?");
         String artist = read.nextLine();
         Music music = new Music(nameMusic, albumName, artist);
-        ArtistEntity artistResult = artistRepository.findByName(artist);
+        ArtistEntity artistResult = artistRepository.findByName(artist)
+                .orElseThrow(() -> new RuntimeException("Artista não encontrado no banco de dados: "  + artist
+                       + " .Antes de cadastrar uma música, cadastre primeiro o artista na opção 1 do menu abaixo :) "));
         MusicEntity musicEntity = music.toEntity(music);
         musicEntity.setArtistEntity(artistResult);
         musicRepository.save(musicEntity);

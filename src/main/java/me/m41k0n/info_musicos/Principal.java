@@ -33,20 +33,24 @@ public class Principal {
         Scanner read = new Scanner(System.in);
 
         while (choice != 0) {
-            var menu = """
-                    1 - Cadastrar artistas
-                    2 - Cadastrar músicas
-                    3 - Listar músicas
-                    4 - Buscar músicas por artista
-                    5 - Pesquisar dados sobre um artista
-                    0 - Sair
-                    """;
+            try {
+                var menu = """
+                        1 - Cadastrar artistas
+                        2 - Cadastrar músicas
+                        3 - Listar músicas
+                        4 - Buscar músicas por artista
+                        5 - Pesquisar dados sobre um artista
+                        0 - Sair
+                        """;
 
-            System.out.println(menu);
-            choice = read.nextInt();
-            read.nextLine();
+                System.out.println(menu);
+                choice = read.nextInt();
+                read.nextLine();
 
-            context.executeAction(choice);
+                context.executeAction(choice);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
         }
     }
 }
