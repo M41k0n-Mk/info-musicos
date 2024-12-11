@@ -1,5 +1,6 @@
 package me.m41k0n.info_musicos.actions;
 
+import jakarta.persistence.EntityNotFoundException;
 import me.m41k0n.info_musicos.entity.ArtistEntity;
 import me.m41k0n.info_musicos.entity.MusicEntity;
 import me.m41k0n.info_musicos.model.Music;
@@ -28,8 +29,8 @@ public class RegisterMusicAction implements MenuAction {
         String artist = read.nextLine();
         Music music = new Music(nameMusic, albumName, artist);
         ArtistEntity artistResult = artistRepository.findByName(artist.toLowerCase())
-                .orElseThrow(() -> new RuntimeException("Artista não encontrado no banco de dados: "  + artist
-                       + " .Antes de cadastrar uma música, cadastre primeiro o artista na opção 1 do menu abaixo :) "));
+                .orElseThrow(() -> new EntityNotFoundException("Artista não encontrado no banco de dados: " + artist
+                        + " .Antes de cadastrar uma música, cadastre primeiro o artista na opção 1 do menu abaixo :) "));
         MusicEntity musicEntity = music.toEntity(music);
         musicEntity.setArtistEntity(artistResult);
         musicRepository.save(musicEntity);
