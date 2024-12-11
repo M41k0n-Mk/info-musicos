@@ -1,9 +1,16 @@
 package me.m41k0n.info_musicos;
 
-import me.m41k0n.info_musicos.actions.*;
+import jakarta.persistence.EntityNotFoundException;
+import me.m41k0n.info_musicos.actions.RegisterArtistAction;
+import me.m41k0n.info_musicos.actions.RegisterMusicAction;
+import me.m41k0n.info_musicos.actions.ListMusicAction;
+import me.m41k0n.info_musicos.actions.SearchMusicByArtistAction;
+import me.m41k0n.info_musicos.actions.SearchArtistDataAction;
+import me.m41k0n.info_musicos.actions.ExitApplicationAction;
 import me.m41k0n.info_musicos.repository.ArtistRepository;
 import me.m41k0n.info_musicos.repository.MusicRepository;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Principal {
@@ -48,8 +55,11 @@ public class Principal {
                 read.nextLine();
 
                 context.executeAction(choice);
-            } catch (Exception e) {
-                System.out.println(e);
+            } catch (IllegalArgumentException | EntityNotFoundException e) {
+                System.out.println(e + "\n");
+            } catch (InputMismatchException e) {
+                System.out.println(e + " Digite somente os números listados para cada opção no menu abaixo:\n");
+                read.nextLine();
             }
         }
     }
