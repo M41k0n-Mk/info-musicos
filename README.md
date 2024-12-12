@@ -53,6 +53,7 @@ _This project was developed as part of a challenge proposed by the instructors f
 
 • **DB_PASSWORD** - password to log into your database
 
+• **SECRET_OPENAPI** - ChatGPT API Key
 ```
 git clone https://github.com/M41k0n-Mk/info-musicos.git
 
