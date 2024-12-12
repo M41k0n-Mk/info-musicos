@@ -30,6 +30,10 @@ _This project was developed as part of a challenge proposed by the instructors f
 
 •  Utilized the Text Blocks feature introduced in Java 13.
 
+• Created private attributes in the classes, and when they needed to be accessed or set, I created getter and setter methods for them, thus ensuring better encapsulation.
+
+• Implemented deserialization and serialization using the ObjectMapper class.
+
 ## Technologies I used to build this project:
 [![](https://img.icons8.com/fluency/48/java-coffee-cup-logo.png)](https://www.java.com/en/)[![](https://img.icons8.com/color/48/spring-logo.png)](https://spring.io/)[![](https://img.icons8.com/ios/50/maven-ios.png)](https://maven.apache.org/)[![](https://img.icons8.com/fluency/48/intellij-idea.png)](https://www.jetbrains.com/pt-br/idea/)[![](https://img.icons8.com/color/48/postgreesql.png)](https://www.postgresql.org/)[![](https://img.icons8.com/glyph-neue/50/github.png)](https://github.com/)[![](https://img.icons8.com/ios-filled/50/chatgpt.png)](https://openai.com/index/chatgpt/)
 
