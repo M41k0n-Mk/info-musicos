@@ -1,6 +1,10 @@
+## Important Notice
+
 _This project was developed as part of a challenge proposed by the instructors for those who completed the course at Alura. While I created the code independently, it may resemble the work of other students who participated in the same challenge._
 
-**The project is not intended for real-world application; it is solely to demonstrate my programming knowledge to recruiters. In this project, various techniques were showcased:**
+**The project is not intended for real-world application; it is solely to demonstrate my programming knowledge to recruiters. In this project, various programming techniques were showcased.**
+
+## Applied Techniques
 
 •  Applied the Command design pattern.
 
