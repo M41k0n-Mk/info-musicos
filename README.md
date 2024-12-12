@@ -1,31 +1,34 @@
-_This project was developed as part of a challenge proposed by the instructors for those who completed the course at
-Alura. Although I created the code, it may be similar to that of other students who participated in the same challenge._
+## Important Notice
 
-**The project is not intended for real-world application; it is solely to demonstrate my programming knowledge to
-recruiters. In this project, I was able to showcase various techniques:**
-- I applied the Command design pattern
+_This project was developed as part of a challenge proposed by the instructors for those who completed the course at Alura. While I created the code independently, it may resemble the work of other students who participated in the same challenge._
 
-- I reduced coupling by injecting the repository into the constructors of the classes
+**The project is not intended for real-world application; it is solely to demonstrate my programming knowledge to recruiters. In this project, various programming techniques were showcased.**
 
-- I performed various database operations with Spring Data JPA
+## Applied Techniques
 
--  I built relationships between tables using the ORM concept of Spring Data JPA
+•  Applied the Command design pattern.
 
--  I utilized the streams feature introduced in Java 8
+•  Reduced coupling by injecting the repository into the constructors of the classes.
 
--  I used Enums with constructors and their own methods
+•  Performed various database operations with Spring Data JPA.
 
--  I threw appropriate exceptions for the context and handled them
+•  Built relationships between tables using the ORM concept of Spring Data JPA.
 
--  I integrated with the ChatGPT API to obtain information about an artist
+•  Utilized the streams feature introduced in Java 8.
 
--  I used Lombok to make the code less verbose
+•  Used Enums with constructors and their own methods.
 
--  I used Java record classes to model the application
+•  Threw appropriate exceptions for the context and handled them.
 
--  I used the Derived Query Method and Custom Query feature of Spring Data JPA to perform database searches
+•  Integrated with the ChatGPT API to obtain information about an artist.
 
--  I used the Text Blocks feature introduced in Java 13**
+•  Leveraged Lombok to make the code less verbose.
+
+•  Modeled the application using Java record classes.
+
+•  Employed the Derived Query Method and Custom Query feature of Spring Data JPA to perform database searches.
+
+•  Utilized the Text Blocks feature introduced in Java 13.
 
 ## Technologies I used to build this project:
 [![](https://img.icons8.com/fluency/48/java-coffee-cup-logo.png)](https://www.java.com/en/)[![](https://img.icons8.com/color/48/spring-logo.png)](https://spring.io/)[![](https://img.icons8.com/ios/50/maven-ios.png)](https://maven.apache.org/)[![](https://img.icons8.com/fluency/48/intellij-idea.png)](https://www.jetbrains.com/pt-br/idea/)[![](https://img.icons8.com/color/48/postgreesql.png)](https://www.postgresql.org/)[![](https://img.icons8.com/glyph-neue/50/github.png)](https://github.com/)[![](https://img.icons8.com/ios-filled/50/chatgpt.png)](https://openai.com/index/chatgpt/)
@@ -50,6 +53,7 @@ recruiters. In this project, I was able to showcase various techniques:**
 
 • **DB_PASSWORD** - password to log into your database
 
+• **SECRET_OPENAPI** - ChatGPT API Key
 ```
 git clone https://github.com/M41k0n-Mk/info-musicos.git
 
