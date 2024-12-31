@@ -10,7 +10,6 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import me.m41k0n.info_musicos.model.Music;
 
 @Entity
 @Table(name = "musics")
@@ -28,9 +27,9 @@ public class MusicEntity {
     @JoinColumn(name = "artist_id")
     private ArtistEntity artistEntity;
 
-    public MusicEntity(Music music) {
-        this.name = music.name();
-        this.album = music.album();
-        this.band = music.band();
+    public MusicEntity(String name, String album, String band) {
+        this.name = name;
+        this.album = album;
+        this.band = band;
     }
 }
