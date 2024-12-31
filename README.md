@@ -47,7 +47,7 @@ _This project was developed as part of a challenge proposed by the instructors f
 
 • Create a database
 
-• Create the environment variables in Windows:
+• Create the environment variables in your O.S:
 
 • **DB_HOST** - name of the machine that will run the project
 

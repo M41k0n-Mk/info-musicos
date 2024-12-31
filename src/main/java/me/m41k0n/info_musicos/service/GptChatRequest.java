@@ -1,4 +1,4 @@
-package me.m41k0n.info_musicos;
+package me.m41k0n.info_musicos.service;
 
 import com.theokanning.openai.completion.CompletionRequest;
 import com.theokanning.openai.service.OpenAiService;

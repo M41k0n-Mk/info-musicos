@@ -1,6 +1,6 @@
 package me.m41k0n.info_musicos.actions;
 
-import me.m41k0n.info_musicos.GptChatRequest;
+import me.m41k0n.info_musicos.service.GptChatRequest;
 
 import java.util.Scanner;
 

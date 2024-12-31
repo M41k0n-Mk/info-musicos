@@ -1,6 +1,4 @@
-package me.m41k0n.info_musicos;
-
-import me.m41k0n.info_musicos.actions.MenuAction;
+package me.m41k0n.info_musicos.actions;
 
 import java.util.HashMap;
 import java.util.Map;
