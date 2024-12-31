@@ -13,7 +13,6 @@ import jakarta.persistence.Column;
 import lombok.NoArgsConstructor;
 import me.m41k0n.info_musicos.enums.FormationType;
 import me.m41k0n.info_musicos.enums.RoleType;
-import me.m41k0n.info_musicos.model.Artist;
 import java.util.List;
 
 @Entity
@@ -32,9 +31,9 @@ public class ArtistEntity {
     @OneToMany(mappedBy = "artistEntity", cascade = CascadeType.ALL)
     private List<MusicEntity> musicEntityList;
 
-    public ArtistEntity(Artist model) {
-        this.name = model.name();
-        this.formationType = model.formation();
-        this.roleType = model.role();
+    public ArtistEntity(String name, FormationType formationType, RoleType roleType) {
+        this.name = name;
+        this.formationType = formationType;
+        this.roleType = roleType;
     }
 }

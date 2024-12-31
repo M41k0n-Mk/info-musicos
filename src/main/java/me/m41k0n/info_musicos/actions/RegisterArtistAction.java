@@ -26,6 +26,6 @@ public class RegisterArtistAction implements MenuAction {
         String role = read.nextLine();
         RoleType roleType = RoleType.fromString(role);
         Artist artist = new Artist(name.toLowerCase(), formationType, roleType);
-        artistRepository.save(artist.toEntity(artist));
+        artistRepository.save(artist.toEntity());
     }
 }
