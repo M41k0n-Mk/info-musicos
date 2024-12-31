@@ -6,7 +6,7 @@ import me.m41k0n.info_musicos.enums.RoleType;
 
 public record Artist(String name, FormationType formation, RoleType role) {
 
-    public ArtistEntity toEntity(Artist artistModel) {
-        return new ArtistEntity(artistModel);
+    public ArtistEntity toEntity() {
+        return new ArtistEntity(name, formation, role);
     }
 }
